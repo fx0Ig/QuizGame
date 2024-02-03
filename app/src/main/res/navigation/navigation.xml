@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.ig.quizgame.ui.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/navigation"
+            app:popEnterAnim="@anim/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.ig.quizgame.ui.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/action_questionFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/navigation"
+            app:popEnterAnim="@anim/navigation" />
+        <action
+            android:id="@+id/action_questionFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/navigation"
+            app:popEnterAnim="@anim/navigation"
+            app:popUpTo="@id/questionFragment"
+            app:popUpToInclusive="true"></action>
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.ig.quizgame.ui.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/navigation"
+            app:popEnterAnim="@anim/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ig.quizgame.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/navigation"
+            app:popEnterAnim="@anim/navigation"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

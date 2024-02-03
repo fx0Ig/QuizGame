@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">QuizGame</string>
+    <string name="start">Start</string>
+    <string name="loading">Loading</string>
+    <string name="result">Results!</string>
+    <string name="menu">Menu</string>
+    <string name="win_result">You answered all questions!!</string>
+    <string name="lose_result">You answered %d/5 questions</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
